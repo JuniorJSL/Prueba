@@ -1,0 +1,25 @@
+Practica de Base de Datos 
+
+Nombre: Junior Sanchez
+C.I: 25.471.874
+
+1. Contar el número de usuarios por marca de teléfono
+
+	SELECT marca, COUNT(marca) FROM tblUsuarios 
+GROUP BY marca;
+
+2. Mostrar el email de los usuarios que usan hotmai
+
+	SELECT email FROM tblUsuarios WHERE email LIKE '%@hotmail.com';
+
+3. Listar los nombres de los usuarios sin saldo o inactivos
+
+	SELECT usuario FROM tblUsuarios WHERE saldo = 0 OR activo = 0;
+
+4. Calcular la suma de los saldos de los usuarios de la compañia telefónica TELCEL
+
+	SELECT sum(saldo) FROM tblUsuarios WHERE compañia = 'TELCEL';
+
+5. Calcular el saldo mínimo de los usuarios de sexo “Hombre”
+
+	SELECT MIN(saldo) FROM tblusuarios WHERE sexo = 'H';
